@@ -14,10 +14,13 @@ def add():
 
 def find():
     name = input("请输入要查找的姓名:")
+    flag = False
     for haoyou in list:
         if haoyou["name"] == name:
             print("好友姓名%s\n好友账号%d"%(haoyou["name"],haoyou["account1"]))
             break
+    if not flag:
+        print("查无此人")
 
 
 
