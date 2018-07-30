@@ -29,6 +29,27 @@ def delete():
             print("删除成功")
             break
 
+def change():
+    name = input("要修改的好友名称:")
+    flag = False
+    for haoyou in list:
+        if haoyou["name"] == name:
+            flag = True
+            name = input("请输入新的名字:")
+            haoyou["name"] = name
+            break
+    if not flag:
+        print("查无此人")
+
+
+
+
+
+
+
+
+
+
 def print_list():
     print("姓名    账号")
     for haoyou in list:
@@ -57,11 +78,12 @@ def print_menu():
 def choose():
     print("请选择功能:".center(30," "))
     while True:
-        print("1、添加")
-        print("2、查找")
-        print("3、删除")
-        print("4、列表")
-        print("5、退出登录")
+        print("1、添加好友")
+        print("2、查找好友")
+        print("3、删除好友")
+        print("4、修改名称")
+        print("5、好友列表")
+        print("6、退出登录")
         print_info()
 
 def print_info():
@@ -73,8 +95,10 @@ def print_info():
     elif num == 3:
         delete()
     elif num == 4:
-        print_list()
+        change()
     elif num == 5:
+        print_list()
+    elif num == 6:
         exit()
 print_menu() 
 
