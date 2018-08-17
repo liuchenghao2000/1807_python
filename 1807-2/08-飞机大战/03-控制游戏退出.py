@@ -20,8 +20,8 @@ screen.blit(hero,(200,500))
 enemy = EnemySprite()
 enemy1 = EnemySprite()
 enemy1.rect.x = 200
-enemy1.rect.y = 700
-enemy1.speed = -2
+#enemy1.rect.y = 700
+enemy1.speed = 2
 enemy_group = pygame.sprite.Group(enemy,enemy1)
 
 clock = pygame.time.Clock()
